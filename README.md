@@ -53,12 +53,3 @@ The model was evaluated on the following metrics:
    ```bash
    python evaluate_hindish_transliterator.py
    ```
-
-## Remaining Tasks
-
-- Draw graph of train and validation loss from the csv.
-- Draw graph of the checkpointwise cer, wer, chrF from above data.
-- Check AI4Bharat model with out `test.csv` data. And compare our final evaluation with it.
-- Measure the token size of our full dataset, using token configuration of our model.
-- Do LLM based evaluation. (For novelty)
-- Start Writing Paper.
