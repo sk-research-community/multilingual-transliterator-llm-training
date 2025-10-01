@@ -1,0 +1,11 @@
+datasets
+sentencepiece
+sacrebleu
+numpy
+pandas
+transformers
+evaluate
+jiwer
+sacremoses
+dotenv
+torch
