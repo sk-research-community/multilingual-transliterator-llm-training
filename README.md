@@ -1,41 +1,33 @@
-# Hindish Transliteration
+# Multi-language Transliteration
 
-This repository contains the code for training and evaluating a Hindish to Devanagari transliteration model.
+This repository contains the code for training and evaluating a multi-language transliteration model.
 
 ## Code Description
 
-- `train_hindish_transliterator.py`: This script is used to train the transliteration model.
-- `evaluate_hindish_transliterator.py`: This script is used to evaluate the trained model.
+- `prepare_dataset.py`: This script downloads and prepares the datasets for training.
+- `train_multi_transliterator.py`: This script is used to train the transliteration model.
+- `evaluate_multi_transliterator.py`: This script is used to evaluate the trained model.
 - `bengali_transliterate.py`: This script contains functions for transliterating Bengali text.
 
 ## Dataset
 
-The model was trained on a combination of the following datasets:
+The model is trained on a combination of the following datasets:
 
-- **IITB English-Hindi Corpus:** https://huggingface.co/datasets/cfilt/iitb-english-hindi
-- **Dakshina Dataset:** https://github.com/google-research-datasets/dakshina
-- **Synthetic Data:** Generated using Gemini 2.0 Flash and Gemini 2.0 Flash-lite.
-- **Romanized Bangla Para Wise Split:** https://huggingface.co/datasets/sk-community/romanized_bangla_para_wise_split
+- **Hindi Dataset:** `sk-community/hindish-dataset-1.8M`
+- **Bangla Dataset:** `sk-community/banglish-1.8M`
 
-The total dataset size is 1.8 million rows.
+The following special tokens are used to specify the transliteration direction:
 
-## Model
-
-The final model is available on Hugging Face: https://huggingface.co/sk-community/HindishFormer-worked
-
-## Evaluation
-
-The model was evaluated on the following metrics:
-
-- **CER (Character Error Rate):** 0.09
-- **WER (Word Error Rate):** 0.13
-- **chrF:** 88.39
+- `<to_htrs>`: English to Hindi
+- `<to_hbtrs>`: Hindi to English
+- `<to_btrs>`: English to Bangla
+- `<to_bbtrs>`: Bangla to English
 
 ## How to Use
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/hindish-transliteration.git
+   git clone https://github.com/your-username/multi-transliteration.git
    ```
 2. **Install the dependencies:**
    ```bash
@@ -45,11 +37,15 @@ The model was evaluated on the following metrics:
    ```
    HF_TOKEN=your_token
    ```
-4. **Train the model:**
+4. **Prepare the dataset:**
    ```bash
-   python train_hindish_transliterator.py
+   python prepare_dataset.py
    ```
-5. **Evaluate the model:**
+5. **Train the model:**
    ```bash
-   python evaluate_hindish_transliterator.py
+   python train_multi_transliterator.py
+   ```
+6. **Evaluate the model:**
+   ```bash
+   python evaluate_multi_transliterator.py
    ```

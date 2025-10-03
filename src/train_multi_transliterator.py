@@ -17,8 +17,8 @@ load_dotenv()
 
 def main():
     # Load the dataset
-    train_df = pd.read_csv("Hindish-Training/hindi/train.csv")
-    eval_df = pd.read_csv("Hindish-Training/hindi/test.csv")
+    train_df = pd.read_csv("train.csv")
+    eval_df = pd.read_csv("test.csv")
 
     train_dataset = Dataset.from_pandas(train_df)
     eval_dataset = Dataset.from_pandas(eval_df)
@@ -54,7 +54,7 @@ def main():
 
     # Set up training arguments
     batch_size = 16
-    model_name = "hindish-transliteration"
+    model_name = "multi-transliteration"
     args = Seq2SeqTrainingArguments(
         f"{model_name}-finetuned-{source_lang}-to-{target_lang}",
         evaluation_strategy="epoch",
