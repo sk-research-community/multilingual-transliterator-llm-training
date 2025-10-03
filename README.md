@@ -27,7 +27,7 @@ The following special tokens are used to specify the transliteration direction:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/multi-transliteration.git
+   git clone https://github.com/sk-research-community/multi-transliteration.git
    ```
 2. **Install the dependencies:**
    ```bash
@@ -49,3 +49,7 @@ The following special tokens are used to specify the transliteration direction:
    ```bash
    python evaluate_multi_transliterator.py
    ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
