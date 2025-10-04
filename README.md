@@ -89,9 +89,9 @@ We collected few romanized hindi text from other opensource contributions. For e
 ## Model
 
 The final model is available on Hugging Face: 
-- Romanized Hindi Transliterator: https://huggingface.co/sk-community/
-- Romanized Bangla Transliterator: https://huggingface.co/sk-community/
-- Multilingual Transliterator: https://huggingface.co/sk-community/
+- Romanized Hindi Transliterator: https://huggingface.co/sk-community/romanized-bengali-transliterator-60M
+- Romanized Bangla Transliterator: https://huggingface.co/sk-community/romanized-hindi-transliterator-60M
+- Multilingual Transliterator: https://huggingface.co/sk-community/indotranslit-multitransliterator-60M
 
 ## Special Tokens
 
@@ -126,8 +126,13 @@ The model was evaluated on the following metrics:
 
 ## Citation
 
-*Will be added later*
-
+```
+@article{gharami2025indotranslit,
+  title={Modeling Romanized Hindi and Bengali: Dataset Creation and Multilingual LLM Integration},
+  author={Kanchon Gharami and Quazi Sarwar Muhtaseem and Deepti Gupta and Lavanya Elluri and Shafika Showkat Moni},
+  year={2025}
+}
+```
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
