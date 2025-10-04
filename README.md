@@ -83,9 +83,9 @@ We transliterated `cfilt/iitb-english-hindi` dataset using indic-trans-v2.
 ## Model
 
 The final model is available on Hugging Face: 
-Romanized Hindi Transliterator: https://huggingface.co/sk-community/
-Romanized Bangla Transliterator: https://huggingface.co/sk-community/
-Multilingual Transliterator: https://huggingface.co/sk-community/
+- Romanized Hindi Transliterator: https://huggingface.co/sk-community/
+- Romanized Bangla Transliterator: https://huggingface.co/sk-community/
+- Multilingual Transliterator: https://huggingface.co/sk-community/
 
 ## Special Tokens
 
@@ -120,7 +120,7 @@ The model was evaluated on the following metrics:
 
 ## Citation
 
-<Will be added later>
+*Will be added later*
 
 ## License
 
