@@ -22,9 +22,11 @@ We used the bangla dataset "wikimedia/wikipedia", "20231101.bn" to convert to ro
 
 - link: https://huggingface.co/datasets/wikimedia/wikipedia/viewer/20231101.bn
 
-Total number of rows: 143069
+We separated each para from all rows. So total number of rows increased.
 
-We seperated each para from all rows. So total number of rows for our dataset was: **975215**
+
+- Total number of rows (from source): 143069
+- Total number of rows (from after splitting): 975215
 
 To transliterate we used a heuristic method. The script rule_based_bengali_transliterate.py was used to convert all rows to romanized form.
 
@@ -34,13 +36,13 @@ To transliterate we used a heuristic method. The script rule_based_bengali_trans
 We used hindi dataset from 3 different sources. 
 
 1. **Dakshina Dataset** : We directly used dakshina romanized hindi dataset of 10,000 rows.
-- Dataset hf file: `sk-community/romanized_hindi/dakshina_data/dakshina_hi_romanized.csv`
+- Dataset hf file: `sk-community/romanized_hindi/dakshina/dakshina_hi_romanized.csv`
 - Source link: https://github.com/google-research-datasets/dakshina
 - Total number of rows: 10,000
 
 2. **Synthetically generated** : We synthetically generated **150k** rows of hindi text and its romanized.
 
-- Dataset hf file: `sk-community/romanized-hindi/synthetic_data.csv`
+- Dataset hf file: `sk-community/romanized_hindi/synthetic/synthetic_data.csv`
 - Model used: `gemini-2.0-flash` and `gemini-2.0-flash-lite`
 - Total number of rows: 150,000
 
@@ -48,10 +50,14 @@ We used hindi dataset from 3 different sources.
 3. **Converted using opensource scripts** :
 We transliterated `cfilt/iitb-english-hindi` dataset using indic-trans-v2.
 
-
+- Dataset hf file: `sk-community/romanized_hindi/opensource/cfilt-iitb-english-hindi.csv`
 - Source link: https://huggingface.co/datasets/cfilt/iitb-english-hindi/
-- Total number of row: 1.66 million
+- Total number of rows: 1.66 million
 - Model source link:	https://github.com/libindic/indic-trans
+
+4. **Others** :
+We collected few romanized hindi text from other opensource contributions. For example we used `crowd-indic-transliteration-data` dataset which contains around 14919 individual rows.
+
 
 ## How to Use
 
