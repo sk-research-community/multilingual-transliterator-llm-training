@@ -16,6 +16,11 @@ The model is trained on a combination of the following datasets:
 - **Hindi Dataset:** `sk-community/romanized_hindi`
 - **Bangla Dataset:** `sk-community/romanized_bangla`
 
+
+ Direct Link Hindi Dataset: https://huggingface.co/datasets/sk-community/romanized_hindi
+ 
+ Direct Link Bangla Dataset: https://huggingface.co/datasets/sk-community/romanized_bangla
+
 ### Bangla Dataset
 
 We used the bangla dataset "wikimedia/wikipedia", "20231101.bn" to convert to romanized form. 
